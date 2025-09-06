@@ -44,12 +44,17 @@ Your browser does not support the audio element.
 </audio> 
 <div id="coolring42plau">
   <style>
-    #coolring42plau {
-      position: fixed; 
-      bottom: 0;
-      margin: 0 auto;
-      padding: 15px; /* creates some space around the widget */
-    }
+#coolring42plau {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  margin: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 9999; /* optional: makes sure it's above other elements */
+}
 
     #coolring42plau table {
       background-color: #ffffff; /* makes the background pure white */
