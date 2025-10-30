@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+:root {
+  --bodyBackgroundColor: #B2C6F9;
+  --contentBackgroundColor: #A5E8A5;
+
+  --strongTextColor: #ff239a;
+  --italicTextColor: #84405c;
+  --underlineTextColor: #ff239a;
+  --linkTextColor: #84405c;
+
+  --h1BackgroundColor: #A3B0DD;
+  --h1TextColor: white;
+
+  --h3UnderlineColor: white;
+  --h4UnderlineColor: #60B272;
+
+  --shadowColor: black;
+}
+
+html, body {
+  margin: 0;
+  font-family: verdana;
+  font-size: 12px;
+  background-color: var(--bodyBackgroundColor);
+}
+
+strong { color: var(--strongTextColor); }
+em { color: var(--italicTextColor); }
+u { color: var(--underlineTextColor); }
+a { color: var(--linkTextColor); font-weight: bold; }
+
+.main {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  background-color: var(--contentBackgroundColor);
+  border: 3px solid white;
+  border-top: none;
+  border-bottom: none;
+  box-shadow: -0.3em 0 .5em var(--shadowColor);
+  max-width: 505px;
+  margin-left: 55px;
+  margin-top: -3px;
+  padding: 0px 0px 10px 0px;
+}
+
+h1 {
+  background-color: var(--h1BackgroundColor);
+  color: var(--h1TextColor);
+  margin-top: 0;
+}
+
+h1, h2, h3, h4 {
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding: 3px 10px;
+}
+
+h3 { border-bottom: 3px solid var(--h3UnderlineColor); }
+h4 { border-bottom: 3px solid var(--h4UnderlineColor); }
+
+p {
+  margin: 3px 10px;
+}
+
+@media only screen and (max-width:719px) {
+  .content {
+    box-shadow: -0.2em 0 .3em var(--shadowColor);
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    margin-left: 7.85%;
+    margin-right: 6%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="content">
+    <h1>this is head one</h1>
+    <p>textextext textextex textextex textextext textextex textextex textextext textextex textextex textextext textextex textextex</p>
+    <h3>this is head three</h3>
+    <h4>this is head four</h4>
+    <p>
+      <strong>bold</strong> <em>italic</em> <u>Underline</u>
+    </p>
+  </div>
+</div>
+</body>
+</html>
+
