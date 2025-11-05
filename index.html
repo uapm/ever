@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <style>
   html, body {
     margin: 0;
@@ -11,10 +11,7 @@
     background: white;
     overflow: hidden;
   }
-p {
-  font-size: 12px;
-  padding-left:12px;
-}
+
   pre {
     position: absolute;
     top: 0;
@@ -23,16 +20,24 @@ p {
     height: 100%;
     width: 100%;
     color: black;
+    background: white;
     font-family: monospace;
     white-space: pre;
     line-height: 1;
+    pointer-events: none;
+    transform-origin: top left;
+  }
+
+  .links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1rem;
   }
 </style>
 </head>
 <body>
-    <p><a href="./workshop.htm"></a>
-    <p><a href="./workshop-leaf.html">251028(workshop-leaf)</a></p>
-    <p><a href="./250830/2.html">250830(2)</a></p>
 <pre id="ascii">
 
 
@@ -175,6 +180,12 @@ p {
 
 </pre>
 
+<div class="links">
+  <p><a href="./workshop.htm">november workshop</a></p>
+  <p><a href="./workshop-leaf.html">october workshop</a></p>
+  <p><a href="./250830/2.html">250830(2)</a></p>
+</div>
+
 <script>
 function fitAscii() {
   const pre = document.getElementById('ascii');
@@ -185,20 +196,18 @@ function fitAscii() {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
 
-  // base font size so vertical height fits exactly
+  // base font size and line height for vertical fit
   const fontSize = vh / numLines;
   pre.style.fontSize = fontSize + 'px';
-
-  // line-height so it fills exactly vertically
   const lineHeight = vh / (fontSize * numLines);
   pre.style.lineHeight = lineHeight;
 
-  // now compute natural width of ASCII
-  const naturalWidth = maxWidth * fontSize * 0.6; // 0.6 ≈ typical monospace width ratio
-  const extraSpace = vw - naturalWidth;
-  const letterSpacing = extraSpace / maxWidth;
+  // width scaling (stretch horizontally)
+  const naturalWidth = maxWidth * fontSize * 0.6; // 0.6 typical monospace width ratio
+  const scaleX = vw / naturalWidth;
 
-  pre.style.letterSpacing = letterSpacing + 'px';
+  // apply transform to enforce fill on mobile
+  pre.style.transform = `scale(${scaleX}, 1)`;
 }
 
 window.addEventListener('resize', fitAscii);
