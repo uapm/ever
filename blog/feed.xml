@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>plau's blog</title>
+  <link>https://plau.me/blog</link>
+  <description>here are all my posts</description>
+  <item>
+    <description><![CDATA[
+<!DOCTYPE html>
+<html class="catbox" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    div {
+      box-sizing: border-box;
+      background: transparent;
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin: 20px 20px 1000px;
+      border-image-source: url("data:image/svg+xml,%3Csvg id='Ebene_1' data-name='Ebene 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 216.69 216.88'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %2337D03A99; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M17.77,58.64c-5.35,8.81-22.8,38.84-16.37,73.87,7.86,42.79,43.67,70.37,75.78,80.05,5.31,1.6,33.08,9.51,66.06-1.17,9.61-3.11,38.02-12.78,57.12-41.97,5.28-8.06,16.54-27.84,16.32-55.18-.17-21.08-7.08-37.02-11.27-45.08L202.31,0l-39.22,25.7s-24.79-14.38-53.87-13.55-43.46,8.59-43.46,8.59L20.65,0l-2.87,58.64Z'/%3E%3C/svg%3E");
+      border-image-slice: 27 27 27 27 fill;
+      border-image-width: 20px 20px 20px 20px;
+      border-image-outset: 0px 0px 0px 0px;
+      border-image-repeat: stretch stretch;
+      border-style: solid;
+      height: 320px;
+      width: 320px;
+      text-align: center;
+      position: relative;
+    }
+
+    body {
+      margin: 0;
+      position: relative;
+    }
+    
+    #div2 {
+
+      margin: 20px 20px 800px;
+
+    }
+
+    .nav {
+      text-decoration: none;
+      color: black;
+      padding: 0;
+    }
+
+    .nav:hover {
+      opacity: 0.5;
+    }
+
+    #page1 {
+      margin: 0;
+    }
+
+    #page1p {
+    	margin-bottom: 102px;
+    }
+    #page2p {
+    	margin-bottom: 28px;
+    }
+  </style>
+</head>
+<body>
+    <p id="page1">*
+  <div>
+    <p id="page1p">
+      You are looking at a webleaf; a self-contained hypertext document.
+      It can be downloaded, sent via email, embedded into a website, etc.
+      This means that when you look at a webleaf online, you actually see a thing,
+      an object, not an assemblage.
+    </p>
+    <a class="nav" href="#page2">▶</a>
+  </div>
+  <p id="page2">*
+  <div id="div2">
+    <p id="page2p">
+      Usually when viewing a webpage, <br>your browser renders multiple re-sources from different places.
+      I believe that we subconsciously treat webpages as "things" though, because our brains lack
+      the intuitive category for what webpages actually are. So by turning a webpage into a self-contained,
+      and therefore <em>tangible</em> file, the intuitive user experience can be more in line with
+      the technical reality.
+    </p>
+        <a class="nav" href="#page1">◀</a>
+  </div>
+</body>
+</html>
+
+    ]]></description> 
+  </item>
+</channel>
+
+</rss> 
