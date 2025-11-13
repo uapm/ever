@@ -6,7 +6,8 @@
   <link>https://plau.me/blog</link>
   <description>here are all my posts</description>
   <item>
-    <description><![CDATA[
+    <title>webleaf1?</title>
+    <content:encoded><![CDATA[
   <style>
     div {
       box-sizing: border-box;
@@ -82,7 +83,7 @@
         <a class="nav" href="#page1">◀</a>
   </div>
 </body>
-    ]]></description> 
+    ]]></content:encoded> 
   </item>
 </channel>
 
