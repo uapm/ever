@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>WORKSHOP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#tww {
+  color: #11111199;
+}
+  body {
+
+
+  font-family: serif;
+}
+h2 {
+  margin-top: -15px;
+  font-weight: 100;
+}
+.acronym {
+  color: deeppink;
+}
+.card {
+  max-width: 330px;
+  margin-top: 1em;
+  padding-left: 1.2em;
+}
+.card 
+li {
+  padding-left: 0;
+}
+.card2 {
+  max-width: 450px;
+}
+
+.translucent {
+  color: #111111;
+}
+.translucent2 {
+  color: #11111180;
+}
+ruby { 
+  ruby-position: under; 
+}
+.indent {
+  margin-left: 1em;
+}
+.indent2 {
+  margin-left: 2em;
+}
+p {
+  margin-left: 1em;
+}
+.nomargintop {
+  margin-top: 0;
+}
+.nomarginbottom {
+  margin-bottom: 0;
+}
+.main {
+  padding-left: 1em;
+}
+li {
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.inline {
+  display: inline-block;
+}
+ruby,
+.bigger,
+.ruby {
+  font-size: 1.5em;
+}
+.example {
+  color: deeppink;
+}
+.example2 {
+  color: deeppink;
+}
+.lessleftmargin {
+  margin-left: -.5em;
+}
+.example3 {
+  color: #11111199;
+}
+
+
+
+.card3 {
+  margin-top: 1em;
+  padding-left: 1.2em;
+}
+.card3
+li {
+  padding-left: 0;
+}
+.info {
+  color: deeppink;
+  text-decoration: underline;
+}
+img {
+  margin-top: -1em;
+  margin-left: 1em;
+}
+
+.smallruby {
+  font-size: 1em;
+}
+.smaller {
+  font-size: .8em;
+}
+.boilerplate {
+max-width: 550px;
+}
+.indent3 {
+  margin-left: .75em;
+}
+
+</style>
+</head>
+<body>
+  <header class="header">
+    <pre id="tww">
+ \    /  |_    _.  _|_
+  \/\/   | |  (_|   |_    o   _         ___           
+                          |  _>    |_|   |   |\/|  |     
+ ? ? ? ? ? ? ? ? ? ? ?             | |   |   |  |  |_
+</pre>
+</header>
+<ol class="main">
+<li><details>
+<summary>HTML is an acronym for <span class="acronym">H</span>yper<span class="acronym">T</span>ext <span class="acronym">M</span>arkup <span class="acronym">L</span>anguage.</summary>
+<ul class="card">
+  <li>Hypertext is text which can link to other text.</li>
+  <li>A markup language is a way of annotating plain-text with instructions for a web-browser</li>
+</ul>
+</details></li>
+<li><details><summary>To write html means to annotate plain-text with tags.</summary>
+<p>If you want to tell a browser how to display your text, you cannot write:
+<p class="example2">Hey browser, "<span class="translucent">having fun</span>" should be italicized!
+<p>You'd have to define "having fun" as an emphasized element, by wrapping it in tags:
+<p class="example">&lt;em&gt;<em class="translucent"> having fun </em>&lt;/em&gt;
+<details class="indent"><summary>Most elements have a start and an end tag.</summary>
+  <p>start tag: <span class="example">&lt;<span class="translucent2">tagname</span><span>&gt;</span></span></p>
+  <p>end tag: <span class="example">&lt;/<span class="translucent2">tagname</span><span>&gt;</span></span></p>
+  <p>These define the start and the end of a certain element</p>
+<p><ruby class="example">&lt;em&gt;<rt>start-tag</rt></ruby><ruby><em class="translucent"> having fun</em> <rt>content</rt></ruby><ruby class="example">&lt;/em&gt;<rt>end-tag</rt></ruby>
+</details>
+<p class="translucent2">You could say tags are hidden messages for the browser.</details></li>
+
+<li><details>
+  <summary>Tags define elements. Elements make up a webpage.</summary>
+<p class="example3 lessleftmargin">&lt;html&gt;</p>
+<p class="indent2"><span class="example3">&lt;title&gt; This is a simplified<span class="example">*</span> Webpage &lt;/title&gt;</span>
+<p class="inline example3 indent2">&lt;h1&gt; <h1 class="translucent inline nomargintop nomarginbottom"> All Webpages Are Made Of Elements</h1><span class="example3"> &lt;/h1&gt;</span>
+
+<p class="indent2"><span class="example3">&lt;strong&gt;</span><strong class="translucent"> Different elements are displayed differently </strong><span class="example3">&lt;strong&gt;</span>
+
+<p class="indent2"><span class="example3">&lt;p&gt; </span> Some elements cannot contain anything.. they are void. The br <span class="example3"> &lt;br&gt;</span><br>(line break) element for example. This is why it is <span class="example3">&lt;em&gt; </span><em>just</em> <span class="example3">&lt;/em&gt; </span> a start tag.<span class="example3"> &lt;/p&gt;</span>
+
+<p class="indent2"><span class="example3">&lt;p&gt; </span> All elements that can contain text, can also contain other elements.<span class="example3"> &lt;/p&gt;</span>
+
+<p class="example3 lessleftmargin">&lt;/html&gt;</p>
+<p class="lessleftmargin example">* <span class="smaller translucent">This example-page is over-simplified. It works, although it is not actually valid. More on this in point 5.</span>
+<details><summary class="translucent2">Parents, Children, Siblings and Roots?</summary>
+  These are terms which describe how elements relate to each other:
+  <ul class="card3">
+    <li>A parent is an element that contains something.</li>
+    <li>A child is an element that is inside a parent element.</li>
+    <li>Siblings are elements that have the same parent.</li>
+    <li>A root element has no parent.</li>
+  </ul>
+  
+</details>
+</details></li>
+
+<li><details><summary>All elements can have attributes.</summary>
+<ul class="card3">
+<li>Attributes give the browser more information about an element.</li>
+<li>They are always in the start tag of an element.</li>
+<li>Usually they consist of a name and a value.</li>
+</ul>
+  <p><span class="translucent2 ruby">&lt;tagname</span><ruby class="translucent2 smallruby">&nbsp;&nbsp;<rt>space</rt></ruby><span class="example ruby">&nbsp;attribute="value"</span><span class="translucent2 ruby">&gt;...</span>
+  <p><ruby class="translucent2">&lt;img <rt>image-tag</rt></ruby>&nbsp;<ruby class="example">src<rt>source</rt></ruby><span class="translucent2 ruby">="</span><ruby class="example">cat.jpg<rt>value</rt></ruby><span class="translucent2 ruby">"&gt;</span>
+<details><summary>Some elements need attributes.</summary>
+<p>The html element contains all elements of a webpage. It should have a language attribute.</p>
+<p class="example3">&lt;html <span class="example">lang="en"</span>&gt;<br>. . .<br>&lt;/html&gt;</p>
+
+<p>The anchor element is used to link to other websites. It needs a <span class="info" title="Hypertext REFerence">href</span> attribute.<br>
+The value is usually a URL</p>
+<p class="example3">&lt;a <span class="example"> href="https://wikipedia.com"</span>&gt;<a href="https://wikipedia.com">wikipedia</a>&lt;/a&gt;</p>
+<p>The image element needs a source attribute which specifies the path to the image.<br>
+It should also have an alternative-text attribute for screen readers.<br>
+Often times it has a width (and/or height) attribute aswell.</p>
+<p class="example3">&lt;img <span class="example">src="cat.jpg" alt="cat close-up" width="250"</span>&gt;</p><img src="cat.jpg" alt="orchid close-up" width="250">
+</details>
+</details>
+<li><details><summary>Most webpages use a similar boilerplate.</summary>
+  <p>Here are some elements every webpage should have<br>
+  A new html document usually starts with a boilerplate.<br>
+  Feel free to copy/paste this one :)</p>
+<section class="boilerplate">
+  <details class="translucent2"><summary class="translucent">&lt;!DOCTYPE html&gt;</summary>
+This is a doctype declaration. It tells the browser that a document is written in HTML 5 (the current standard)
+  </details>
+  <details class="translucent2"><summary class="translucent">&lt;html lang="en"&gt;</summary>
+  start of the html element + language attribute. The html element is the root element - it contains the whole webpage, except the doctype declaration.
+  </details>
+  <details class="translucent2"><summary class="translucent">&nbsp;&nbsp;&lt;head&gt;</summary>
+  start of the head element, which contains all 'invisible' metadata. There can only be one head in a document.
+  </details>
+  <details class="translucent2"><summary class="translucent">&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;TITLE&lt;/title&gt;</summary>
+  The page-title. It is for the browser-tab and search engines.
+  </details>
+  <details class="translucent2"><summary class="translucent">&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;</summary>
+  This defines the character set a browser uses to display the webpage. It makes using spëcîål characters possible.
+  </details>
+  <details class="translucent2"><summary class="translucent">&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</summary>
+  This stops mobile phones from automatically zooming out of your page
+  </details>
+  <details class="translucent2"><summary class="translucent">&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;</summary>
+  This is how you reference an external stylesheet. If you don't have one you don't need this line.
+  </details>
+  <details class="translucent2"><summary class="translucent">&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;</summary>
+  Within this element you can declare styles using CSS. If you use an external style-sheet you don't need it.
+  </details>
+  <details class="translucent2"><summary class="translucent">&nbsp;&nbsp;&nbsp;&nbsp;* { box-sizing: border-box; }</summary>
+    This is a line of CSS. The CSS-working group admitted that not choosing this as a default was a mistake.
+  </details>
+  <span class="indent3">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br></span>
+  <span class="indent3">&nbsp;&nbsp;&lt;/head&gt;</span>
+  <details class="translucent2"><summary class="translucent">&nbsp;&nbsp;&lt;body&gt;</summary>
+    The body element contains all of a webpage's content. There can only be one body in a document.
+   </details>
+   <span class="indent3">&nbsp;&nbsp;&lt;/body&gt;<br></span>
+   <span class="indent3">&lt;/html&gt;</span>
+</section>
+</details>
+</li>
+</ol>
+</body>
+</html>
+
+
+
+
+<!-- 
+<p class="card2">This happens by:</p>
+<ol class="card2">
+  <li>Splitting the text into different elements.</li>
+  <li>Defining each element by wrapping it's content in tags.<br>
+  Most elements have a start and an end tag.</li> 
+</ol>
+<p>Each tag tells the browser what kind of element the user will be looking at/interacting with. This way the browser can decide what default style it should apply to said element.
+<p>This not only affects the visual presentation of a webpage, but also the way screen readers interact with it. Keeping this in mind is essential for designing a webpage which is accessible to the blind.
+<p>Elements can also have attributes, which are defined in the opening tag. There are informative ones, like the title attribute, whose content appears if you hover your mouse over an element.
+<p>The class and id attributes are the most common however. They are used to make specific elements style-able with CSS.
+<p><ruby>&lt;p class="what<rt>opening tag with attribute</rt>ever"&gt;<span class="translucent"> I'm a paragraph in the class "whatever"</span><rt>content</rt>&lt;/p&gt;<rt>closing tag</rt></ruby>
+</section>
+
+ is a way of adding tags to a text. These tags act as instructions for a web-browser. They can turn plain text into Hypertext by tagging something as a link.
+
+
+
+is a convention of annotating text so it becomes hypertext
+
+
+writing convention in which plain text can be marked up so that it becomes hypertextso that web-browsers know what to do with it. -->
