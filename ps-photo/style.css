@@ -1,154 +1,141 @@
+@font-face {
+  font-family: my-cool-font;
+  src: url(src/b/OpenSans-VariableFont_wdth,wght.ttf);
+}
+
+
 html {
 min-height: 100vh;
+font-family: my-cool-font, serif;
 }
 
 body {
-background: url(src/b/wood.jpg) repeat ;
-background-size: 20%;
-display: flex;
-justify-content: space-around;
-align-items: stretch;
 min-height: 100vh;
 color: #161838;
 line-height: 1.5;
+text-align: center;
+padding: 3rem;
 }
 
-header {
-flex: 0 0 auto;
-position: fixed;
-z-index:1;
-top: 0;
-left: 0;
+h1, h3 {
+font-weight: 500;
 }
 
 h1 {
-margin: 15px;
+margin-bottom: 10px;
 }
-.button {
-padding: 10px;
-width: 100%;
-margin: 0;
-
+a {
+margin: 2rem;
+ cursor: pointer;
 }
 
-.button {
-border: outset 2px #cafffd;
-background: #aedcda;
-padding: 15px;
+a, span {
+color: #00000080;
 }
-.button:hover {
-border: inset 2px #cacaca99;}
 
-.button {
-border: outset 2px #cacaca;
-background: no-repeat 100% url(src/b/metal.jpg) #aaaaaa80;
-color: #161838;
-background-blend-mode: hard-light;
-width: 150px;
+a:nth-child(4) {
+margin-right: .5rem;
 }
-.button:hover {
-border: inset 2px #e6e9e999;}
-
-.button:last-child {
-border-radius:0 0 20px 0;
+a:nth-child(6) {
+margin-left: .5rem;
 }
 
 
+.gallery::before,
+.gallery::after {
+position: absolute;
+height: 100%;
+display: flex;
+align-items: center;
+font-size: 7rem;
+font-weight: 900;
+color: #00000000;
+transition: color .7s ease-in-out;
+cursor: pointer;
+z-index: 5;
+}
+.gallery::before{
+content:'❬';
+left: -3rem;
+}
+.gallery::after{
+content:'❭';
+right: -3rem;
+}
 
-aside {
-position: fixed;
-top: 0;
-right: 0;
-text-align: right;
-padding: 10px;
+
+.gallery:hover::before,
+.gallery:hover::after {
+color: #ccc;
+}
+
+.gallery {
+display: flex;
+justify-content: space-around;
+width: fit-content;
+}
+.gallery img {
+max-height: 70vh;
 }
 main {
 display: flex;
 flex-direction: column;
 align-items: center;
-flex: 4;
-padding: 30px 8vw;
 }
 section {
 width: 149mm;
-margin-top: 150px;
-margin-bottom: 300px;
 box-sizing: content-box;
-padding: 50px;
-border-radius: 30px;
-background: url(src/b/wood2.jpg) repeat ;
-background-size: 20%;
-box-shadow: inset #453d3090 0 2px  20px 10px;
-}
-
-section::after {
-pointer-events: none;
-background: linear-gradient(135deg, rgba(242,246,248,0.25) 0%,rgba(200,225,231,0.25) 50%,rgba(181,210,220,0.25) 51%,rgba(210,239,249,0.25) 100%);
-border: outset 1px rgba(145,194,203,0.25);
- content: '';
- position: absolute;
- border-radius: 30px;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- z-index: 1;
- transition: opacity 1s;
- opacity: 1;
-}
-
-section:hover::after {
-pointer-events: none;
-opacity: 0.2;
+padding: 0 4rem;
+margin-top: 3rem;
+margin-bottom: 300px;
+text-align: left;
 }
 
 
-
-h1 {
-margin-bottom: 50px;
-}
 h3 {
 margin-bottom: 7px;
 }
-p {
+section p {
 margin-top: 15px;
 }
 .container {
-margin: ;
 width: fit-content;
 }
 
-.container::before {
+.arrow {
 position: absolute;
-content: '';
-width: calc(100% + 10px);
-height: calc(100% - 20px);
-left: -5px;
-top: 10px;
-background: #bbb;
-border: 1px inset #888;
-z-index: ;
+height: 100%;
+display: flex;
+align-items: center;
+font-size: 7rem;
+font-weight: 900;
+color: #dddddd00;
+transition: color .7s ease-in-out;
+cursor: pointer;
 }
 
-.container:hover::before {
-background: #fff;
-border: 1px inset #fff;
+.left {
+left: -3rem;
+}
+.right {
+right: -3rem;
 }
 
-.container:hover .leftArrow,
-.container:hover .rightArrow {
-opacity: 1
+section:hover .arrow {
+color: #ccc;
 }
 
-
-.slider-wrapper:hover .overlay {
+section:hover .overlay {
 opacity: 1;
 }
-.slider-wrapper:hover .negative {
+section:hover .negative {
 opacity: 0;
 }
 
-
+footer {
+cursor: pointer;
+color: #00000050;
+}
 .shadow {
 position: absolute;
 width: calc(100% - 2rem);
@@ -157,7 +144,7 @@ top:1.42rem;
 left:1rem;
 box-shadow: #adadad 0 3px 5px .9rem;
 }
-.container:hover .shadow, .slider-wrapper:hover {
+section:hover .shadow, section:hover {
 box-shadow: #ffffff20 0 0px 20px 8px
 }
 
@@ -206,6 +193,10 @@ max-height: 24mm;
 overflow: hidden;
 }
 
+.negative .imgContainer {
+background: #c58765;
+}
+
 .overlay img, .negative img {
 max-width: 36mm;
 mix-blend-mode: normal;
@@ -218,11 +209,10 @@ filter: brightness(135%);
 
 .negative img {
 filter: invert(100%) brightness(100%) contrast(80%);
-opacity: ;
 /*transition: filter ease-in-out .5s;*/
 mix-blend-mode: multiply;
 }
 
 img:hover {
-cursor: zoom-in;
+cursor: pointer;
 }
